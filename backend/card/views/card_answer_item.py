@@ -5,7 +5,6 @@ from profile.models import Profile
 
 
 def get_card_answer_item(request, card_answer_id, profile_id):
-    # TODO: Add a the actual current_user
     # First we find the user who needs the new list of cards
     current_user = Profile.objects.get(id=profile_id)
 
@@ -18,7 +17,7 @@ def get_card_answer_item(request, card_answer_id, profile_id):
         context = {
             'card_answer': {
                 'id': card_answer_item.id,
-                'created_at': card_answer_item.created_on,
+                'created_at': card_answer_item.created_on.strftime('%Y-%m-%dT%H:%M:%S.%fZ'),
                 'answer': card_answer_item.answer,
                 'card': {
                     'id': card_answer_item.card.id,
