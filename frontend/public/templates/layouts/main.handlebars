@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html manifest="/manifest.appcache" data-appcache="true">
+<html data-appcache="false">
+<head>
+    <meta charset="utf-8">
+    <meta name="fragment" content="!">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+    <title>{{ meta.title }}</title>
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="/">
+      <img class="logo-src" src="/images/logo.png" alt="Logo">
+    </a>
+  </header>
+
+  {{{ body }}}
+
+  <script type="text/javascript" src="/javascripts/lib/jquery.js"></script>
+  <script type="text/javascript" src="/javascripts/lib/handlebars.js"></script>
+  <script type="text/javascript" src="/javascripts/main.js"></script>
+</body>
+</html>
