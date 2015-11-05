@@ -38,6 +38,7 @@ module.exports = function ( grunt ) {
                 src: [
                     // Libraries
                     'public/javascripts/lib/jquery.js',
+                    'public/javascripts/lib/handlebars.js',
 
                      // Partials
                     'public/javascripts/partials/*.js',
