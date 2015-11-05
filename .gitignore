@@ -1,2 +1,6 @@
 .idea/
 *.pyc
+node_modules/
+stylesheets/
+main-min.js
+.sass-cache
