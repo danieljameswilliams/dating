@@ -5,10 +5,9 @@ from card.models import CardAnswer
 from profile.models import Profile
 
 
-def get_card_list(request):
-    # TODO: Add a the actual current_user
+def get_card_list(request, profile_id):
     # First we find the user who needs the new list of cards
-    current_user = Profile.objects.get(id=1)
+    current_user = Profile.objects.get(id=profile_id)
 
     # But so he doesn't get cards he already has answered, we need to find
     # the id of those cards, and exclude them from the "card_set"

@@ -3,7 +3,7 @@ from django.contrib import admin
 
 urlpatterns = [
     # API URLs
-    url(r'^api/cards/', 'card.views.card_list'),
+    url(r'^api/cards/(?P<profile_id>[0-9]+)/', 'card.views.card_list'),
     url(r'^api/cards/(?P<card_id>[0-9]+)/', 'card.views.card_item'),
 
     url(r'^api/card-answers/(?P<profile_id>[0-9]+)/', 'card.views.card_answer_list'),
