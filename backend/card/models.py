@@ -25,7 +25,7 @@ class CardAnswer(models.Model):
     answer = models.CharField(max_length=255, null=True)
 
     def __unicode__(self):
-        return '%s - %s (%s)' % (self.answer, self.card.question.label, self.card.association.label)
+        return '%s - %s (%s)' % (self.answer, self.card.question.label, self.card.association.label if self.card.association else '')
 
 
 # ####################

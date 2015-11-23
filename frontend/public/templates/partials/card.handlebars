@@ -1,0 +1,9 @@
+<div class="card{{#if isLast}} is-active{{/if}}" data-id="{{ card.id }}">
+  <h1>{{ card.question }}</h1>
+  {{#if card.association}}<span>In the context of <strong>{{ card.association }}</strong></span>{{/if}}
+
+  <div class="card__answer">
+    <input class="answer__input js-answer_input" type="text">
+    <button class="answer__button js-answer_button" type="submit">Submit</button>
+  </div>
+</div>

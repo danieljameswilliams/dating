@@ -1,15 +1,4 @@
-var url = require('url'); // QUESTION: Is this initialized multiple times, in every controller partial?
-
-var mockData = {
-	meta: {
-		lang: 'da_DK',
-		title: 'Mock Title',
-		description: 'Mock Description',
-		keywords: 'Mock Keywords',
-		canonical: '/mock-url',
-		robots: 'noindex, nofollow'
-	}
-};
+var url = require('url');
 
 module.exports = function( request, response ) {
 	response.set( 'Content-Type', 'text/html' );
@@ -18,7 +7,7 @@ module.exports = function( request, response ) {
 	var location = url.parse( request.url, true );
 
 	// Set the context to the page data
-	var context = { page: mockData };
+	var context = {};
 
 	// Checking if the request has a async query-parameter,
 	if( location.query.async ) {
@@ -27,6 +16,6 @@ module.exports = function( request, response ) {
 	}
 	else {
 		// We want to serve some pre-rendered HTML, due to either a server-request or noscript.
-		response.render('frontpage', context);
+		response.render('cards', context);
 	}
 }
